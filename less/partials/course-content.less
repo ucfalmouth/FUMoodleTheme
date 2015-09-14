@@ -1,0 +1,194 @@
+/** 
+MOST OF THESE STYLES AFFECT THE COURSE DETAIL VIEW
+But some do have impacts on the course lists and home page
+so change with caution
+**/
+
+// Hide the section-0
+#section-0 {
+    display: none;
+}
+
+.course-content {
+    margin-top: 0;
+}
+
+.course-content ul.topics {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.course-content ul.topics li.section {
+    list-style: none;
+    margin: 0 0 5px 0;
+    padding: 0 0 20px 0;
+    border: none;
+}
+
+.course-content ul li.section.main {
+    margin-top: 0;
+    border-bottom: 2px solid @fal-border-colour;
+}
+
+
+.block .generalbox .categorylist {
+    margin-bottom: 0;
+}
+
+.categorybox .category {
+    margin-bottom: 5px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+
+
+// course menu - used for sections list
+.block_course_menu {
+  margin-top: -26px; // pull up over border and space from prev block
+}
+
+.block_course_menu .header {
+    display: none;
+}
+
+.editing .block_course_menu .header {
+    display: block;
+}
+
+
+.block_course_menu .content {
+  padding: 0;
+}
+
+.block_course_menu .block_tree li>p>a {
+    display: block;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    display: block;
+    font-family: @font-family-base;
+    margin: 11px 0;
+    font-size: 14px;
+    line-height: 20px;
+    margin-right: 20px;
+    z-index: 0;
+    color: @fal-sidebar-link-colour;
+    text-decoration: none;
+    text-shadow: none;
+    font-weight: 400;
+    text-align: left;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+
+.block_course_menu .block_tree li>p>a.active_tree_node {
+    color: darken(@fal-sidebar-link-colour, 25%);
+    font-weight: 400 !important;
+}
+
+// edit course buttons
+.editing .course-content ul.topics li.section .left, .editing .course-content ul.topics li.section .right {
+    display: inline;
+    float: left;
+    position: absolute;
+    margin-left: -50px;
+}
+.editing .course-content ul.topics li.section .right {
+  margin-top: 23px;
+  margin-left: -47px;
+}
+
+
+
+// list of resources etc at the bottom of a module
+
+.section .activity .activityinstance>a {
+    padding-right: 20px;
+}
+
+.section .activity .activityinstance, .section .activity .activityinstance div {
+    display: block;
+    position: relative;
+}
+
+.editing .section .activity .activityinstance {
+    padding-right: 20px;
+}
+
+.section li.activity {
+    padding: 0;
+    font-size: 16px;
+    margin: 0;
+    list-style: none;
+    border-bottom: 1px solid #E6E6E6;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    clear: both;
+}
+
+.section .activity .editing_move {
+    position: absolute;
+    left: 0;
+    top: 5px;
+}
+
+/** RESOUCE LIST AT THE END OF SECTION **/
+.site-topic ul.section, .course-content ul.section {
+    margin: 0;
+    padding: 1em 0;
+    border: none;
+    border-radius: 0;
+    display: block;
+    overflow: hidden;
+    position: relative;
+}
+
+.course-content ul.section {
+  margin-top:  20px;
+}
+
+
+/** Module links i.e. block/section **/
+.block_section .c1 {
+    display: block !important;
+}
+.block_section .buttons {
+    float: right;
+}
+
+
+@hidden-color: lighten(@brand-danger, 50%);
+.course-content ul li.section.hidden {
+    opacity: 1;
+    filter: alpha(opacity=1);
+    background-color: @hidden-color;
+    position: relative;
+
+    background: repeating-linear-gradient(
+      45deg,
+      @hidden-color,
+      @hidden-color 10px,
+      #ffffff 10px,
+      #ffffff 20px
+    );
+}
+
+.course-content ul li.section.hidden:before {
+    font-family: FontAwesome;
+    content:"\f070";
+    position: absolute;
+    right: 10px;
+    top: 2px;
+    font-size: 500%;
+    line-height: 1;
+    color: @brand-danger;
+    opacity: 0.2;
+}
+
+.editing .section .activity:hover, .editing .section .activity.action-menu-shown {
+    background-color: lighten(@brand-danger, 48%);
+}

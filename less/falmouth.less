@@ -1,0 +1,38 @@
+/**
+ * Import all the rules from the parent.
+ */
+@import "../../bootstrap/less/moodle.less";
+@import "variables.less";
+@import "overrides.less";
+
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('[[font:theme|glyphicons-halflings-regular.eot]]');
+  src: url('[[font:theme|glyphicons-halflings-regular.eot]]?#iefix') format('embedded-opentype'),
+       url('[[font:theme|glyphicons-halflings-regular.woff]]') format('woff'),
+       url('[[font:theme|glyphicons-halflings-regular.ttf]]') format('truetype'),
+       url('[[font:theme|glyphicons-halflings-regular.svg]]') format('svg');
+}
+
+// for debug
+.red {
+	background-color: red !important;
+}
+
+.green {
+	background-color: green !important;
+}
+
+/** NEW BREAK POINT FOR XXXL SCREENS **/
+// @media only screen and (min-width: 1600px) {
+// 	.container {
+// 		width: 1570px;
+// 	}
+
+// }
+
+@media only screen and (min-width: 1250px) {
+  .container {
+    width: 94%;
+  }
+}

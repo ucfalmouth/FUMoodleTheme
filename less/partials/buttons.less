@@ -1,0 +1,154 @@
+
+.btn {
+  box-shadow: inset 1px 1px 2px rgba(255,255,255,0.2), inset -1px -1px 1px rgba(0,0,0,0.1);
+  .caret {
+    border-top-color: #fff;
+  }
+}
+
+
+.mixin-btn-generate(@color; @background; @background-end-color;  @border) {
+  color: @color !important;
+  background-color: @background;
+  border-color: @border;
+
+  #gradient > .vertical(@start-color: @background; @end-color: @background-end-color);
+  .reset-filter(); // Disable gradients for IE9 because filter bleeds through rounded corners
+  background-repeat: repeat-x;
+
+  &:hover,
+  &:focus,
+  &.focus,
+  &:active,
+  &.active,
+  .open > .dropdown-toggle& {
+    color: @color;
+    border-color: darken(@border, 12%);
+    background-color: @background-end-color;
+    background-position: 0 -15px;
+  }
+  &:active,
+  &.active,
+  .open > .dropdown-toggle& {
+    background-image: none;
+  }
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &,
+    &:hover,
+    &:focus,
+    &.focus,
+    &:active,
+    &.active {
+      background-color: @background;
+          border-color: @border;
+    }
+  }
+
+  .badge {
+    color: @background;
+    background-color: @color;
+  }
+}
+
+
+.btn-default {
+  .mixin-btn-generate( @btn-default-color; @btn-default-bg; @btn-default-bg-end; @btn-default-border );
+  text-shadow: 0 1px 0 #fff;
+  box-shadow: inset 1px 1px 2px rgba(255,255,255,0.2);
+}
+
+.btn-primary {
+  .mixin-btn-generate( @btn-primary-color; @btn-primary-bg; @btn-primary-bg-end; @btn-primary-border );
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.btn-info {
+ .mixin-btn-generate( @btn-info-color; @btn-info-bg; @btn-info-bg-end; @btn-info-border );
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1); 
+}
+
+.btn-success {
+ .mixin-btn-generate( @btn-success-color; @btn-success-bg; @btn-success-bg-end; @btn-success-border );
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1); 
+}
+
+.btn-warning {
+ .mixin-btn-generate( @btn-warning-color; @btn-warning-bg; @btn-warning-bg-end; @btn-warning-border );
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1); 
+}
+
+.btn-danger {
+ .mixin-btn-generate( @btn-danger-color; @btn-danger-bg; @btn-danger-bg-end; @btn-danger-border );
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1); 
+}
+
+.btn-link {
+  box-shadow: none;
+}
+
+
+.navbar .navbar-nav>li>a.btn {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 8px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.navbar .navbar-nav>li>a.btn-navbar, .btn-navbar {
+  .mixin-btn-generate( @btn-primary-color; mix(@navbar-default-bg, #ffffff, 85%); @navbar-default-bg; @navbar-default-border );
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+div.btn-group.module-dropdown {
+  // THIS IS THE ABOUT THIS MODULE BUTTON 
+    display: none;
+}
+
+.btn-block {
+  margin-bottom: 10px;
+}
+
+// this should be all manually created buttons on the right hand side bar like other modules etc
+#block-region-side-post .block_html .btn-primary {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+#btn-toggle-side-post {
+  position: fixed;
+  display: block;
+  top: 70px;
+  right: 5px;
+  border: 1px solid @fal-border-colour;
+  padding: 5px 10px;
+  cursor: pointer;
+  z-index: 500;
+  background-color: #fff;
+}
+
+#btn-toggle-side-post:hover {
+  background-color: fade(@brand-primary, 50%);
+  border-color: @brand-primary;
+}
+
+@media (max-width: @screen-sm-max) {
+  #btn-toggle-side-post {
+    display: none;
+  }
+}

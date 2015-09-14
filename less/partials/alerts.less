@@ -1,0 +1,89 @@
+.alert-error {
+	.alert-variant(@alert-danger-bg; @alert-danger-border; @alert-danger-text);
+}
+
+#notice {
+	.alert();
+	.alert-variant(@alert-info-bg; @alert-info-border; @alert-info-text);
+	margin-top: 20px;
+}
+
+/** A DARKER danger alert **/
+.alert-danger-scary {
+  .alert-variant(@alert-danger-text, darken(@alert-danger-text, 15%), #fff);
+  text-shadow: 1px 1px 1px darken(@alert-danger-text, 15%);
+}
+
+.alert {
+	border-width: 3px;
+}
+
+/** SET THE MOODLE DEBUG MESSAGES TO LOOK LIKE ALERTS **/
+.debuggingmessage {
+	.alert;
+  	.alert-variant(@alert-danger-bg; @alert-danger-border; @alert-danger-text);
+  	width: 90%;
+  	margin-left: auto; margin-right: auto;
+  	margin-top: 20px;
+}
+
+
+/* message from moodle when editing courses about drag and drop files to make sections etc */
+#dndupload-status {
+	z-index: 2000;
+}
+
+/* used by maintenance mode */
+.alert-footer-fixed {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	border-width: 0;
+	border-top-width: 3px;
+	border-radius: 0;
+	font-size: 120%;
+	margin-bottom: 0;
+	opacity: 0.9;
+}
+
+
+
+/** the old template used h3.alert.alert-notice etc to generate
+deadlines and notice messages, so we must override the h3 default sizing
+**/
+h3.alert {
+	font-size: @font-size-base;
+	font-family: @font-family-base;
+	font-weight: normal;
+}
+
+.alert-notice, .alert-deadline, .alert-lecture-seminar {
+	position: relative;
+	padding-left: 40px;
+}
+
+/** GENERATE ALERT ICON MIXIN **/
+.alert-with-icon(@content-code) {
+	content: @content-code;
+	font-family: FontAwesome;
+	display: block;
+    position: absolute;
+    left: 10px;
+    top: 9px;
+    font-size: 150%;
+}
+
+.alert-notice:before {
+	.alert-with-icon("\f075");
+}
+.alert-deadline:before {
+	.alert-with-icon("\f06a");
+} 
+.alert-lecture-seminar:before {
+	.alert-with-icon("\f073");
+}
+
+
+
+
+

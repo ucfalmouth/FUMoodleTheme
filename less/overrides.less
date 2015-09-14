@@ -1,0 +1,256 @@
+// Falmouth
+// -----------------------------------------------------
+
+a {
+  color: @brand-primary;
+}
+
+a:hover, a:focus {
+    color: @brand-primary;
+    text-decoration: underline;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+
+// SOME COLOUR STYLING FOR PAGE LAYOUTS ====
+#outerwrapper {
+  background-color: #ebebeb;
+  padding-top: 18px;
+}
+
+#page {
+  background-color: #ffffff;
+  border: 1px solid @fal-border-colour;
+  border-radius: 4px;
+  padding: 0;
+}
+
+.page-header-borderered {
+  border-bottom: 1px solid @fal-border-colour;
+}
+
+.padded-horiz-15 {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.no-top-border {
+  border-top: none;
+}
+
+/** FORCE IMAGES TO BE RESPONSIVE **/
+#region-main img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+// BLOCKS ====
+
+#block-region-side-post, .block-region-side-post {
+  border-left: 1px solid @fal-border-colour;
+  padding-top: 15px;
+  padding-left: 0;
+}
+
+.block {
+  box-shadow: none;
+  border-radius: 0;
+  border: none;
+  padding: 0;
+}
+
+.block .header {
+  background-color: transparent;
+  background: none;
+  padding: 0 20px;
+}
+
+.block .header .title h2 {
+    font-size: 14px;
+    padding: 3px 0;
+    letter-spacing: 0px;
+    font-weight: 500;
+    color: #B4B4B4;
+}
+
+.block .content {
+  padding: 10px 20px 20px 20px;
+  border-bottom: 1px solid @fal-border-colour;
+}
+
+
+
+.block-hider-hide, .block-hider-show, .moveto {
+  display: none;
+}
+
+
+.block a {
+    color: #929292;
+    line-height: 24px;
+    font-size: 14px;
+    font-weight: 400;
+}
+.block a:hover {
+  color: @brand-primary;
+}
+
+#course_search_block {
+    margin-top: -12px;
+    margin-bottom: -8px;
+    
+    .form-control {
+      max-width: 100%;
+    }
+
+}
+
+@import "partials/footer.less";
+
+@import "partials/navbar.less";
+
+@import "partials/admin.less";
+
+@import "partials/breadcrumbs.less";
+
+
+
+// FORMS
+form select:focus, form input[type="text"]:focus, form input[type="password"]:focus, form.atto_form input[type="url"]:focus, select.singleselect:focus {
+  border-color: @brand-primary;
+  outline: 0;
+  box-shadow: 0 0 0 2px fadeout(@brand-primary, 60%);
+}
+
+// 
+.no-overflow {
+  margin-bottom: 0;
+  // overflow-x: visible;
+  // overflow-y: visible;
+}
+
+
+
+@import "partials/buttons.less";
+
+@import "partials/login.less"; // uses some mixins that are defined in buttons
+
+@import "partials/alerts.less";
+
+
+// SOME BASE
+// lists and stuff
+ul, ol {
+    padding: 0;
+    margin: 0 0 10px 25px;
+}
+
+.unlist, .unlist li, .inline-list, .inline-list li, .block .list, .block .list li, .section li.activity, .section li.movehere, .tabtree li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.block .unlist, .block .unlist li, .block .inline-list, .block .inline-list li, .block .list, .block .list li, .section li.movehere, .tabtree li {
+    padding: 0;
+    font-size: 14px;
+    margin: 0;
+    list-style: none;
+    line-height: 24px;
+}
+
+.block.block_section .unlist>li {
+    padding-right: 0px;
+    border-top: 1px solid #e6ebee;
+    padding-top: 8px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    width: 100%;
+}
+
+.block.list_block .unlist>li>.column {
+    padding-right: 0px;
+    display: inline-block;
+}
+
+.block.block_section .unlist>li:first-child {
+    border-top: none;
+    padding-top: 0px;
+    margin-top: 0px;
+}
+
+.block_section .content .icon {
+    display: none;
+}
+
+
+
+.block_navigation .block_tree li {
+    border-top: 1px solid @fal-border-colour;
+    border-bottom: 1px solid @fal-border-colour;
+    // margin-bottom: -1px;
+    display: block;
+    position: relative;
+}
+
+.block_navigation .block_tree>li.type_custom {
+    margin-right: 0px;
+    margin-bottom: -1px;
+    // padding-left: 20px;
+    background: #f1f1f1;
+}
+
+.block_navigation .block_tree>li.type_custom.current_branch {
+    background: #fff;
+    margin-left: -1px;
+    z-index: 500;
+}
+
+.block_settings .leaf img, .block_navigation p.tree_item a img.smallicon {
+    display: none;
+}
+
+.block_navigation .block_tree li.item_with_icon > p {
+  position:relative; 
+  padding-left: 21px;
+}
+
+
+.block .header .title .commands {
+    padding: 0;
+    position: relative;
+    margin-top: -30px;
+}
+
+.moodle-actionmenu ul {
+  margin-top: -5px;
+}
+
+
+@import "partials/course-content.less";
+
+@import "partials/courselist.less";
+
+@import "partials/offcanvas.less";
+
+
+@import "partials/scip.less";
+
+
+// Containers =================================================================
+
+.panel-primary,
+.panel-success,
+.panel-warning,
+.panel-danger,
+.panel-info {
+
+  .panel-heading,
+  .panel-title {
+    color: #fff;
+  }
+}

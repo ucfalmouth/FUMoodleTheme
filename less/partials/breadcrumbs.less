@@ -1,0 +1,45 @@
+
+
+.breadcrumb {
+    padding: 20px;
+    background: none;
+    background-color: transparent;
+    list-style: none;
+    border-radius: 0px;
+    color: @fal-dark-text;
+    font-weight: 500;
+}
+
+.breadcrumb-nav {
+	border-bottom: 1px solid @fal-border-colour;
+	float: none;
+	width: 100%;
+	margin: 0;
+}
+
+.page-header-borderered .breadcrumb-nav {
+    border-bottom: none;
+}
+
+.breadcrumb>li {
+    display: inline;
+    font-size: 14px;
+    font-family: @font-family-headings;
+    line-height: 21px;
+    text-shadow: none;
+}
+
+.breadcrumb > li a {
+    color: @fal-breadcrumb-colour;
+    font-weight: 700;
+}	
+
+.breadcrumb>li>.divider {
+    padding: 0 5px;
+    color: @fal-border-colour;
+}
+
+.breadcrumb>li+li:before {
+    content: "";
+    padding: 0;
+}

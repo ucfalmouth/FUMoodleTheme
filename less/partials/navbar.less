@@ -1,0 +1,125 @@
+body {
+  // FIXED TO TOP NAVBAR REQUIRES 70px space
+  padding-top: 50px;  
+}
+
+
+.navbar {
+
+  #gradient > .vertical-three-colors(lighten(@navbar-default-bg, 8%), @navbar-default-bg, 60%, darken(@navbar-default-bg, 4%));
+  border-bottom: 1px solid darken(@navbar-default-bg, 10%);
+
+  filter: none;
+  .box-shadow(0 1px 10px rgba(0, 0, 0, 0.1));
+
+  .navbar-nav > li > a,
+  &-brand {
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+  }
+}
+
+.navbar-default {
+  background-image: none;
+  filter: none;
+}
+
+.page-edit-btn-holder {
+  margin: 8px 0 0 0;
+  padding: 0 15px;
+}
+
+.page-edit-btn-holder .singlebutton {
+  display: inline-block;
+}
+
+.navbar-brand {
+  font-size: 24px;
+  letter-spacing: -1px;
+  font-family: @font-family-headings;
+}
+
+.navbar .dropdown-menu {
+  background-color: @navbar-default-link-hover-bg;
+  border-color: @navbar-default-border;
+
+  .divider {
+    background-color: darken(@navbar-default-link-hover-bg, 5%);
+  }
+
+  & > li > a {
+    margin: 0 10px;
+    padding: 3px 10px;
+    border-radius: 4px;
+    color: @navbar-default-color;
+
+    &:hover, &:focus {
+      color: #ffffff;
+      background-color: @navbar-default-bg;
+    }
+  }
+
+}
+
+.nav-avatar {
+  max-width: none;
+  height: 40px;
+  float: left;
+  margin-top: -7px;
+  margin-right: 10px;
+  border-radius: 20px;
+}
+
+.navbar form {
+  margin-bottom: 0 !important;
+}
+
+
+/** OVERRIDE RESPONSIVE IN MAIN NAVBAR **/
+
+.navbar-notresponsive>li>a {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.navbar-notresponsive>li {
+    float: left;
+}
+.navbar-notresponsive {
+    float: left;
+    margin: 0;
+}
+
+.container>.navbar-header {
+    margin-right: 0;
+    margin-left: 0;
+    float: left;
+}
+
+.navbar > .container .navbar-brand {
+    margin-left: -15px;
+}
+
+@media(max-width: @screen-xs-max) {
+
+  .navbar-brand {
+    padding-left: 10px;
+    padding-right: 5px;
+    font-size: 20px;
+  }
+
+  .navbar-toggle .icon-bar {
+    width: 18px;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .navbar-notresponsive>li>a {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .nav-avatar {
+    margin-right: 0;
+  }
+
+
+}

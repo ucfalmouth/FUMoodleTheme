@@ -1,0 +1,104 @@
+
+/** 
+This will implement the off canvas navigation bar which activates at the md gridpoint from bootstrap
+**/
+
+@media (max-width: @screen-sm-max) {
+
+	@darkened-color: darken(@navbar-default-bg, 10%);
+
+	#block-region-side-post {
+		max-width: 340px;
+		display: block !important;
+		position: absolute;
+		left: -350px;
+		top: 0;
+		z-index: 1000;
+
+		background-color: @navbar-default-bg;
+		border-right: 2px solid @darkened-color;
+
+		transition: all 0.2s linear;
+
+		padding-top: 60px; // to allow for the top navbar
+
+		&.show {
+			left: -2px;
+		}
+	}
+
+
+	#btn-toggle-navbar {
+	    display: inline-block !important;
+	}
+
+	#block-region-side-post {
+		& .block {
+			background-color: transparent;
+			border: none;
+		}
+
+		& .block .header .title h2 {
+			text-shadow: 1px 1px 1px @darkened-color;
+		    color: lighten(#929292, 15%);
+		    text-transform: uppercase;
+		    letter-spacing: 1px;
+		}
+
+		& .block .content {
+			border-bottom-color: @darkened-color;
+		}
+
+		& .block .content hr {
+			border-top-color: @darkened-color;
+		}
+
+		& .tree_item, & a, & p {
+			color: lighten(#929292, 10%);
+		}
+
+		/** HOME PAGE CATEGORY LIST **/
+		& .categorylist .category a {
+			display: block;
+			border-radius: 3px;
+		}
+
+		& .categorylist .category a:hover, & .categorylist .category a:focus {
+			background-color: lighten(@navbar-default-bg, 5%);
+		}
+
+		/** SECTION LIST IN COURSE **/
+		& .block_navigation .block_tree li {
+			border-top-color: @darkened-color;
+			border-bottom-color: @darkened-color;
+			margin-left: 15px;
+		}
+
+		& .block_navigation .block_tree li:first-child {
+			border-top: none;
+		}
+
+		& .block_navigation .block_tree>li.type_custom {
+			background-color: @navbar-default-bg;
+
+			&:hover {
+				background-color: lighten(@navbar-default-bg, 5%);
+			}
+		}
+
+		& .block_navigation .block_tree>li.type_custom.current_branch {
+			margin-left: 15px;
+			background-color: @darkened-color;
+
+			a {
+				color: #fff !important;
+			}
+		}
+
+		& .block.block_section .unlist>li {
+			border-top-color: @darkened-color;
+		}
+	}
+
+
+}

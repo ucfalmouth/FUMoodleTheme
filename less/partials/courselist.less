@@ -1,0 +1,137 @@
+/** 
+THIS SHOULD TARGET THE COURSE CATEGORIES and COUSE LIST PAGES
+also search page
+**/
+
+/* HIDE COURSE CAT PICKER BOX **/
+#page-course-index-category .categorypicker, #page-course-category .categorypicker {
+    display: none;
+}
+
+
+#page-course-index-category .buttons,
+#page-course-category .buttons {
+	margin-top: 20px;
+}
+
+/* HIDE MOODLE COURSE SEARCH BOX */
+#coursesearch {
+	display: none;
+}
+
+
+.course_category_tree .collapsible-actions {
+	margin: 10px 0;
+}
+
+
+/** CATEGORY TREE VIEW **/
+.course_category_tree .category>.info {
+    background-color: #fff;
+    border: none;
+    border-bottom: 1px solid @fal-border-colour;
+    border-radius: 0;
+    box-shadow: none;
+    min-height: 0;
+    padding: 0;
+    margin: 3px 0 3px 0;
+    clear: both;
+}
+
+.course_category_tree .category>.info>.categoryname {
+	margin: 0;
+	cursor: pointer;
+    line-height: 30px;
+    padding: 2px 18px;
+    font-size: 24px;
+    font-family: @font-family-headings;
+    font-weight: 300;
+}
+
+
+.course_category_tree .category>.info>.categoryname a {
+	display: block;
+	padding: 10px 5px;
+}
+
+.course_category_tree .category>.info>.categoryname a:hover {
+	background-color: #ebebeb;
+	text-decoration: none;
+}
+
+
+/** Panels appear in the bottom of the course category list and need to be 
+made the same as the course categories 
+**/
+.courses .panel,
+#page-course-index-category .courses .panel {
+	background-color: #fff;
+    border: none;
+    border-bottom: 1px solid @fal-border-colour;
+    border-radius: 0;
+    box-shadow: none;
+    min-height: 0;
+    padding: 0;
+    margin: 3px 0 3px 0;
+    clear: both;
+}
+
+.courses .panel-heading,
+.courses .panel-default > .panel-heading,
+#page-course-index-category .courses .panel-heading,
+#page-course-index-category .courses .panel-default > .panel-heading  
+{
+	background-color: transparent;
+	border: none;
+	border-radius: 0;
+	line-height: 30px;
+    padding: 2px 18px;
+    font-size: 24px;
+    font-family: @font-family-headings;
+    font-weight: 300;
+}
+
+.courses .panel-heading .enrolmenticons,
+#page-course-index-category .courses .panel-heading .enrolmenticons {
+	display: none;
+}
+
+.courses .panel-heading .moreinfo,
+#page-course-index-category .courses .panel-heading .moreinfo {
+	display: none;
+}
+
+.courses .panel-heading a,
+#page-course-index-category .courses .panel-heading a {
+	display: block;
+	padding: 10px 5px;
+}
+
+.courses .panel-heading a:hover,
+#page-course-index-category .courses .panel-heading a:hover {
+	background-color: #ebebeb;
+	text-decoration: none;
+}
+
+.courses .panel-body,
+#page-course-index-category .courses .panel-body {
+	padding: 2px 23px;
+	font-size: 13px;
+}
+
+.highlight {
+    background-color: #FFFBCC;
+}
+
+.course-search-result {
+    .panel-heading a {
+        padding-bottom: 0;
+        font-weight: 400;
+    }
+    .coursebox .content .coursecat {
+        text-align: left;
+        margin: 0 0 8px 0;
+    }
+}
+
+
