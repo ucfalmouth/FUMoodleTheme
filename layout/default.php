@@ -62,6 +62,13 @@ include_once('partials/navbar.php');
                     echo $OUTPUT->main_content();
                     echo $OUTPUT->course_content_footer();
                     ?>
+
+                    <?php
+                    if ($PAGE->pagetype == "user-profile") {
+                        $tmp_url = new moodle_url('/user/editadvanced.php', array('id'=>$USER->id));
+                        echo "<a href='$tmp_url' class='btn btn-primary'>Edit profile</a>";
+                    }
+                    ?>
                 </div>
             </div>
 
