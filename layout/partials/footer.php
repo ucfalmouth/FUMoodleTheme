@@ -7,11 +7,10 @@ if (! $hidefooter):
         <div class="row" id="screen-footer">
             <ul class="list-unstyled">
               <li><a href="http://myfalmouth.falmouth.ac.uk/">My Falmouth</a></li>
-              <li><a href="http://studentmail.falmouth.ac.uk/">Student Email</a></li>
-              <li><a href="http://mailspace.falmouth.ac.uk/">Staff Email</a></li>
               <li><a href="http://www.falmouth.ac.uk/termdates">Term Dates</a></li>
-              <li><a href="http://et.falmouth.ac.uk">Help</a></li>
-              <li><a href="http://et.falmouth.ac.uk">Educational Technology</a></li>
+              <li><a href="https://www.falmouth.ac.uk/student-regulations">Student Regulations</a></li>
+              <li><a href="http://learningspace.falmouth.ac.uk/theme/falmouth/pages/copyright-compliance.html">Copyright Compliance</a></li>
+              <li><a href="http://etsupport.freshdesk.com/">Help</a></li>
             </ul>
 
         </div>
@@ -25,7 +24,7 @@ endif;
 ?>
         <div class="row">
 	        <span id="credits">
-	            <small>Lovingly crafted by <a href="http://et.falmouth.ac.uk">Educational Technology</a>. &copy; Falmouth University. All rights reserved.</small>
+	            <small>Built by <a href="http://et.falmouth.ac.uk">Educational Technology</a>. &copy; Falmouth University. All rights reserved.</small>
 	        </span>
 	        <a id="fal-logo" href="http://falmouth.ac.uk/"></a>
 	    </div>
@@ -38,7 +37,7 @@ endif;
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 ga('create', 'UA-7991839-1', 'auto');
-ga('send', 'pageview'); 
+ga('send', 'pageview');
 </script>
 
 <?php
