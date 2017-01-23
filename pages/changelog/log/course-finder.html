@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Static Top Navbar Example for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../dist/css/bootstrap.css" rel="stylesheet">
+
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
+
+
+    <link href="../../../css/navbar-static-top.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    
+    <!-- Learning Space Styles -->
+    <link href="../../../style/learningspace.css" rel="stylesheet">
+
+    <style>
+    #region-main, .header-inner {
+padding: 18px 20px;
+-webkit-box-shadow: none;
+-moz-box-shadow: none;
+margin-bottom: 20px;
+background: #fff;
+border: 2px solid #ecedf0;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+-webkit-box-shadow: none;
+-moz-box-shadow: none;
+margin-top: 42px;
+font-family: "Roboto";
+}
+
+.pagination ul {
+display: inline-block;
+margin-bottom: 0;
+margin-left: 0;
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+border-radius: 4px;
+-webkit-box-shadow: none;
+-moz-box-shadow: none;
+box-shadow: none;
+}
+
+.disabled:hover{
+  cursor: not-allowed;
+}
+
+#award-list li {
+list-style: none;
+margin-left: 0;
+margin-bottom: 0px;
+padding-left: 0;
+padding-right: 20px;
+}
+
+.pagination ul > li {
+display: inline;
+
+font-weight: bold;
+}
+
+.pagination ul > li > a{
+  font-size: 14px ;
+}
+
+    </style>
+
+  <body>
+
+<header role="banner" class="navbar navbar-fixed-top">
+    <nav role="navigation" class="navbar-inner navbar-inverse">
+        <div class="container-fluid">
+            <a class="brand" href="/">Learning Space</a>
+            <ul class="nav">
+                <!--<li class="menu-item-my-courses"><a href="#">My Courses</a></li>-->
+                <li><a class="menu-item-resources dropdown-toggle" data-toggle="dropdown" href="#">Resources</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="http://ask.fxplus.ac.uk/">ASK (Academic Skills)</a></li>
+                        <li><a href="http://careerhub.falmouth.ac.uk">Creative Futures Hub (Employability)</a></li>
+                        <li><a href="dyslexia.fxplus.falmouth.ac.uk">Dyslexia Skills</a></li>
+                        <li><a href="http://intranet.falmouth.ac.uk/html/finance/">Finance Services</a></li>
+                        <li><a href="http://www.fxu.org.uk/">FXU</a></li>
+                        <li><a href="mailto:international@falmouth.ac.uk?Subject=Enquiry">International Office</a></li>
+                        <li><a href="https://sp.falmouth.ac.uk/public/itservices/Pages/IT%20Services.aspx">IT Services</a></li>
+                        <li><a href="http://library.fxplus.ac.uk/">Library and Information Services</a></li>
+                        <li><a href="http://intranet.falmouth.ac.uk/html/qualityoffice/">Quality Office</a></li>
+                        <li><a href="mailto:registry@falmouth.ac.uk?Subject=Enquiry">Registry</a></li>
+                        <li><a href="/course/view.php?id=665">Results Release</a></li>
+                        <li><a href="/category.php?id=59">Software Training</a></li>
+                        <li><a href="http://www.fxplus.ac.uk/study/student-support-services">Student Support</a></li>
+                        <li><a href="http://www.falmouth.ac.uk/facilities/the-compass">The Compass</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="nav-collapse collapse">
+                        <ul class="nav pull-right">
+            <li><i class="icon-user"></i></li>
+            <!--<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="/user/profile.php?id=2" title="View profile">Admin User <b class="caret"></b></a><ul class="dropdown-menu" role="menu"><li><a href="/user/profile.php?id=2" title="View profile">My Profile</a></li><li class="divider"></li><li><a href="https://et.tenderapp.com/help/discussion/new"><i class="icon-question-sign"></i> Help</a></li><li><a href="/login/logout.php?sesskey=iZhi1K5hN3"><i class="icon-off"></i> Logout</a></li></ul></li>-->
+            <!--<li><a href="#" id="trigger" class="icon-list"> MAIN MENU</a></li>-->
+            <!--<button id="showLeft">Show/Hide Left Slide Menu</button>-->
+            </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+
+    <div id="static-page-header">
+      <div class="header-inner container-fluid">
+        <div class="input-group filters">
+          <input type="text" class="form-control form-search" placeholder="Search for courses...">
+          <span class="input-group-addon glyphicon glyphicon-search"></span>
+        </div>
+
+        <div class="pagination">
+        <ul class=" a-to-z">
+          <li><a href="#">A</a></li>
+          <li class="disabled"><a href="#">B</a></li>
+          <li><a href="#">C</a></li>
+          <li><a href="#">D</a></li>
+          <li><a href="#">E</a></li>
+          <li><a href="#">F</a></li>
+          <li><a href="#">G</a></li>
+          <li class="disabled"><a href="#">H</a></li>
+          <li><a href="#">I</a></li>
+          <li><a href="#">J</a></li>
+          <li class="disabled"><a href="#">K</a></li>
+          <li class="disabled"><a href="#">L</a></li>
+          <li><a href="#">M</a></li>
+          <li><a href="#">N</a></li>
+          <li class="disabled"><a href="#">O</a></li>
+          <li><a href="#">P</a></li>
+          <li class="disabled"><a href="#">Q</a></li>
+          <li><a href="#">R</a></li>
+          <li class="disabled"><a href="#">S</a></li>
+          <li><a href="#">T</a></li>
+          <li class="disabled"><a href="#">U</a></li>
+          <li class="disabled"><a href="#">V</a></li>
+          <li class="disabled"><a href="#">W</a></li>
+          <li class="disabled"><a href="#">X</a></li>
+          <li class="disabled"><a href="#">Y</a></li>
+          <li class="disabled"><a href="#">Z</a></li>
+         
+         
+        </ul>
+      </div>
+
+      <div class="pagination">
+        <ul class=" a-to-z">
+          
+         
+          <li class="info show-all"><a href="#">Show All</a></li>
+        </ul>
+      </div>
+    </div>
+      </div>
+
+    <div id="region-main" class="container-fluid">
+
+  
+      <div class="alert-info alert none-found" style="display:none"><h3><strong>Oh dear!</strong> It appears that no courses were found... <a class="clear-form">Start over</a></h3></div>
+      
+      <div id="page-content" class="row-fluid">
+        <div class="span12">
+      <ul id="award-list" class="unlist ">
+        <li class="span4" data-award-name="BA Advertising" data-award-type="BA" data-letter-index="A">
+          <h3><a href="http://learningspace.falmouth.ac.uk/course/view.php?id=360">BA Acting</a></h3>
+        </li>
+        <li class="span4" data-award-name="BA Advertising" data-award-type="BA" data-letter-index="A">
+          <h3><a href="http://learningspace.falmouth.ac.uk/course/view.php?id=487">BA Advertising</a></h3>
+        </li>
+        <li class="span4" data-award-name="BA 3D Design" data-award-type="BA" data-letter-index="NUM">
+          <h3><a href="http://learningspace.falmouth.ac.uk/course/view.php?id=52">BA 3D Design</a></h3>
+        </li>
+        <li class="span4" data-award-name="BA Contemporary Crafts" data-award-type="BA" data-letter-index="C" >
+          <h3><a href="http://learningspace.falmouth.ac.uk/course/view.php?id=240">BA Contemporary Crafts</a></h3>
+        </li>
+        <li class="span4" data-award-name="BA Drawing" data-award-type="BA" data-letter-index="D">
+          <h3><a href="http://learningspace.falmouth.ac.uk/course/view.php?id=537">BA Drawing</a></h3>
+        </li>
+        <li class="span4" data-award-name="BA Fashion" data-award-type="BA" data-letter-index="F">
+          <h3><a href="http://learningspace.falmouth.ac.uk/course/view.php?id=549">BA Fashion</a></h3>
+        </li>
+        <li class="span4" data-award-name="BA Performance Sportswear Design" data-award-type="BA" data-letter-index="P">
+          <h3><a href="http://learningspace.falmouth.ac.uk/course/view.php?id=549">BA Performance Sportswear Design</a></h3>
+        </li>
+        <li class="span4" data-award-name="BA Fashion Photography" data-award-type="BA" data-letter-index="F">
+          <h3><a href="http://learningspace.falmouth.ac.uk/course/view.php?id=521">BA Fashion Photography</a></h3>
+        </li>
+        <li class="span4" data-award-name="BA Fine Art" data-award-type="BA" data-letter-index="F">
+          <h3><a href="http://learningspace.falmouth.ac.uk/course/view.php?id=19">BA Fine Art</a></h3>
+        </li>
+        <li class="span4" data-award-name="BA Graphic Design" data-award-type="BA" data-letter-index="G">
+          <h3><a href="http://learningspace.falmouth.ac.uk/course/view.php?id=261">BA Graphic Design</a></h3>
+        </li>
+        <li class="span4" data-award-name="BA Illustration" data-award-type="BA" data-letter-index="I">
+          <h3><a href="http://learningspace.falmouth.ac.uk/course/view.php?id=592">BA Illustration</a></h3>
+        </li>
+        <li class="span4" data-award-name="BA Interior Design" data-award-type="BA" data-letter-index="I">
+          <h3><a href="http://learningspace.falmouth.ac.uk/course/view.php?id=290">BA Interior Design</a></h3></h3>
+        </li>
+        <li class="span4" data-award-name="BA Textile Design" data-award-type="BA" data-letter-index="T">
+          <h3><a href="http://learningspace.falmouth.ac.uk/course/view.php?id=417">BA Textile Design</a></h3>
+        </li>
+        <li class="span4" data-award-name="MA Art Environmant" data-award-type="MA" data-letter-index="A">
+          <h3><a href="http://learningspace.falmouth.ac.uk/course/view.php?id=416">MA Art &amp; Environment</a></h3>
+        </li>
+        <li class="span4" data-award-name="MA Fine Art Contemporary Practice" data-award-type="MA" data-letter-index="F">
+          <h3><a href="http://learningspace.falmouth.ac.uk/course/view.php?id=415">MA Fine Art: Contemporary Practice</a></h3>
+        </li>
+        <li class="span4" data-award-name="MA Illustration" data-award-type="MA" data-letter-index="I">
+          <h3><a href="http://learningspace.falmouth.ac.uk/course/view.php?id=14">MA Illustration Authorial Practice</a></h3>
+        </li>
+        <li class="span4" data-award-name="BA Dance Choreography" data-award-type="BA" data-letter-index="D">
+          <h3><a href="http://learningspace.falmouth.ac.uk/course/view.php?id=143">BA Dance &amp; Choreography</a></h3>
+        </li>
+        <li class="span4" data-award-name="BA Creative Events Management" data-award-type="BA" data-letter-index="C">
+          <h3><a href="http://learningspace.falmouth.ac.uk/course/view.php?id=322">BA Creative Events Management</a></h3>
+        </li>
+        <li class="span4" data-award-name="BA Digital Animation" data-award-type="BA" data-letter-index="D">
+          <h3><a href="http://learningspace.falmouth.ac.uk/course/view.php?id=564">BA Animation &amp; Visual Effects</a></h3>
+        </li>
+        <li class="span4" data-award-name="BA Digital Media" data-award-type="BA" data-letter-index="D">
+          <h3><a href="http://learningspace.falmouth.ac.uk/course/view.php?id=662">BA Digital Media</a></h3>
+        </li>
+        <li class="span4" data-award-name="BA English" data-award-type="BA" data-letter-index="E">
+          <h3><a href="http://learningspace.falmouth.ac.uk/course/view.php?id=563">BA English</a></h3>
+        </li>
+        <li class="span4" data-award-name="BA English Creative Writing" data-award-type="BA" data-letter-index="E">
+          <h3><a href="http://learningspace.falmouth.ac.uk/course/view.php?id=563">BA English with Creative Writing</a></h3>
+        </li>
+        <li class="span4" data-award-name="BA English Writing" data-award-type="BA" data-letter-index="E">
+          <h3><a href="http://learningspace.falmouth.ac.uk/course/view.php?id=563">BA English and Writing</a></h3>
+        </li>
+        <li class="span4" data-award-name="BA Film" data-award-type="BA" data-letter-index="F">
+          <h3><a href="http://learningspace.falmouth.ac.uk/course/view.php?id=196">BA Film</a></h3>
+        </li>
+        <li class="span4" data-award-name="BA Journalism" data-award-type="BA" data-letter-index="J">
+          <h3><a href="http://learningspace.falmouth.ac.uk/course/view.php?id=74">BA Journalism</a></h3>
+        </li>
+        <li class="span4" data-award-name="BA English Media" data-award-type="BA" data-letter-index="E">
+          <h3><a href="http://learningspace.falmouth.ac.uk/course/view.php?id=563">BA English &amp; Media</a></h3>
+        </li>
+        <li class="span4" data-award-name="BA Music" data-award-type="BA" data-letter-index="M">
+          <h3><a href="http://learningspace.falmouth.ac.uk/course/view.php?id=361">BA Music</a></h3>
+        </li>
+        <li class="span4" data-award-name="BA Popular Music" data-award-type="BA" data-letter-index="P">
+          <h3><a href="http://learningspace.falmouth.ac.uk/course/view.php?id=361">BA Popular Music</a></h3>
+        </li>
+        <li class="span4" data-award-name="BA Creative Music Technology" data-award-type="BA" data-letter-index="C">
+          <h3><a href="http://learningspace.falmouth.ac.uk/course/view.php?id=361">BA Creative Music Technology</a></h3>
+        </li>
+        <li class="span4" data-award-name="BA Theatre" data-award-type="BA" data-letter-index="T">
+          <h3><a href="http://learningspace.falmouth.ac.uk/course/view.php?id=360">BA Theatre</a></h3>
+        </li>
+        <li class="span4" data-award-name="BA Musical Theatre" data-award-type="BA" data-letter-index="M">
+          <h3><a href="http://learningspace.falmouth.ac.uk/course/view.php?id=360">BA Musical Theatre</a></h3>
+        </li>
+        <li class="span4" data-award-name="BA Natural History Photography" data-award-type="BA" data-letter-index="N">
+          <h3><a href="http://learningspace.falmouth.ac.uk/course/view.php?id=72">BA Marine &amp; Natural History Photography</a></h3>
+        </li>
+        <li class="span4" data-award-name="BA Photography" data-award-type="BA" data-letter-index="P">
+          <h3><a href="http://learningspace.falmouth.ac.uk/course/view.php?id=239">BA Photography</a></h3>
+        </li>
+        <li class="span4" data-award-name="BA Press Editorial Photography" data-award-type="BA" data-letter-index="P">
+          <h3><a href="http://learningspace.falmouth.ac.uk/course/view.php?id=202">BA Press &amp; Editorial Photography</a></h3>
+        </li>
+        <li class="span4" data-award-name="MA Creative Advertising" data-award-type="MA" data-letter-index="C">
+          <h3><a href="http://learningspace.falmouth.ac.uk/course/view.php?id=529">MA Creative Advertising</a></h3>
+        </li>
+        <li class="span4" data-award-name="MA International Journalism" data-award-type="MA" data-letter-index="I">
+          <h3><a href="http://learningspace.falmouth.ac.uk/course/view.php?id=235">MA International Journalism</a></h3>
+        </li>
+        <li class="span4" data-award-name="MA Multimedia Broadcast Journalism" data-award-type="MA" data-letter-index="M">
+          <h3><a href="http://learningspace.falmouth.ac.uk/course/view.php?id=153">MA Multimedia Broadcast Journalism</a></h3>
+        </li>
+        <li class="span4" data-award-name="MA Professional Writing" data-award-type="MA" data-letter-index="P">
+          <h3><a href="http://learningspace.falmouth.ac.uk/course/view.php?id=586">MA Professional Writing Full Time</a></h3>
+        </li>
+           <li class="span4" data-award-name="MA Professional Writing" data-award-type="MA" data-letter-index="P">
+          <h3><a href="http://learningspace.falmouth.ac.uk/course/view.php?id=587">MA Professional Writing 2013/15</a></h3>
+        </li>
+      </ul>
+    </div> <!-- /span12 -->
+    </div> <!-- /row-fluid -->
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" ></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    
+    <script>
+      $(document).ready(function(){
+
+        var awardListItem = $("#award-list > li")
+
+        // When a user clicks on a-z filer
+        $(".a-to-z").on("click", "li", function(){
+            
+          resetFilters();
+          var selection = $(this);
+          
+          // Add "active" class to currently selected item
+          selection.addClass("active");
+
+          // reset the search field
+          $('.filters .form-search').val("");
+
+          // Hide all elements in award list
+          awardListItem.hide();
+
+          // get the letter that ws clicked
+          var letterIndex = selection.find("a")
+                                     .text()
+                                     .toString();
+
+          // find items in award list that have letter index of clicked letter
+          $("#award-list").find("[data-letter-index='" + letterIndex + "']")
+                          .each(function(){
+            $(this).show();
+          });
+
+          if (selection.hasClass("disabled")){
+            showNoneFoundMessage();
+          } else if (selection.hasClass("show-all")){
+            resetFilters();
+          } else {
+            hideNoneFoundMessage();
+          }
+
+        });
+
+        // When a search has been entered to search field
+        $(".filters").on("keyup", ".form-search", function(){
+          
+          resetFilters();
+
+          // cache the value of search input, lowercased
+          var search = $(this).val()
+                              .toString()
+                              .toLowerCase();
+          
+          // If there is no search entered into field
+          if (search.length == 0) {
+
+            // Show all awards in award list
+            awardListItem.show();
+            
+            // Else if there is a search hide all elements in award list
+            } else {
+            awardListItem.hide();  
+          }
+
+          //hide none found error
+          hideNoneFoundMessage();
+            
+          var awardList = "";
+
+          // for each element in the award list
+          awardListItem.each(function(){
+                        
+            var currentAwardListItem = $(this);
+
+            // Get the award name, cast to lower case string
+            awardName = currentAwardListItem.data("award-name")
+                                            .toString()
+                                            .toLowerCase();
+
+            // add the award to award list
+            awardList += awardName;
+
+            // if the award name contains the search
+            // show the item in the award list
+            if (awardName.indexOf(search) != -1){
+              currentAwardListItem.show();
+            } 
+          });
+
+          // If the award list doesn't contain search, i.e. if the search returns nothing
+          if (awardList.indexOf(search) === -1){
+ 
+          // display the "none found" error message
+          showNoneFoundMessage();
+              
+            // set award list to empty string
+            awardList = "";  
+          }
+        
+        });
+
+        $(".clear-form").on("click", function(){
+          resetFilters();
+          $('.filters .form-search').val("");
+        })
+
+        // Display / Hide "none found" message
+        var noneFoundMessage = $(".none-found");
+
+        var showNoneFoundMessage = function(){
+          noneFoundMessage.show();
+        }
+
+        var hideNoneFoundMessage = function(){
+          noneFoundMessage.hide();
+        }
+
+        // Remove "active" class from currently selected item in a-z list
+        var removeActiveSelection = function(){
+          $(".a-to-z > li").removeClass("active");
+        }
+
+        var resetFilters = function(){
+          awardListItem.show();
+          removeActiveSelection();
+          hideNoneFoundMessage();
+        }
+
+      // End Document ready
+      });
+
+    </script>
+  </body>
+</html>
